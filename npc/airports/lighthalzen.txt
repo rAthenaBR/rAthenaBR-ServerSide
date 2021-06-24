@@ -12,8 +12,8 @@
 //= 1.0 First version.
 //============================================================ 
 
-//================= TraduÃ§Ã£o rAthenaBR =======================
-//= Ãšltima atualizaÃ§Ã£o feita: 23/06/2021
+//================= Tradução rAthenaBR =======================
+//= Última atualização feita: 23/06/2021
 //= Revisado por: Ruiivo
 //============================================================
 
@@ -22,16 +22,16 @@ lhz_airport,143,43,5	script	Assistente do Aeroplano#lhz_air1a::lhz_airport1	90,{
 	mes "Bem-vindo ao";
 	mes "Aeroporto de Lighthalzen,";
 	mes "onde oferecemos constantes";
-	mes "vÃ´os para Einbroch, Juno e Hugel.";
+	mes "vôos para Einbroch, Juno e Hugel.";
 		next;
-	if (select("Embarcar no DirigÃ­vel:Cancelar.") == 1) {
+	if (select("Embarcar no Dirigível:Cancelar.") == 1) {
 		mes "[Assistente do Aeroplano]";
-		mes "A taxa de embarque do DirigÃ­vel Ã©";
-		mes "1,200 zeny, mas se vocÃª";
+		mes "A taxa de embarque do Dirigível é";
+		mes "1,200 zeny, mas se você";
 		mes "possuir um Bilhete para Aeroplano";
-		mes "a taxa nÃ£o serÃ¡ cobrada.";
+		mes "a taxa não será cobrada.";
 			next;
-		if (select("Sim:NÃ£o") == 1) {
+		if (select("Sim:Não") == 1) {
 			if (countitem(7311) > 0) {
 				delitem 7311,1;
 				warp "lhz_airport",148,51;
@@ -43,7 +43,7 @@ lhz_airport,143,43,5	script	Assistente do Aeroplano#lhz_air1a::lhz_airport1	90,{
 				end;
 			}
 			mes "[Assistente do Aeroplano]";
-			mes "Me desculpe, mas vocÃª nÃ£o";
+			mes "Me desculpe, mas você não";
 			mes "possui 1,200 zenys para pagar";
 			mes "pela passagem.";
 			close;
@@ -59,32 +59,32 @@ lhz_airport,143,43,5	script	Assistente do Aeroplano#lhz_air1a::lhz_airport1	90,{
 lhz_airport,158,43,5	duplicate(lhz_airport1)	Assistente do Aeroplano#lhz_air1b	90
 lhz_airport,126,43,5	duplicate(lhz_airport1)	Assistente do Aeroplano#lhz_air1c	90
 
-lhz_airport,143,49,3	script	Equipe de RecepÃ§Ã£o#lhz_air2a::lhz_airport2	90,{
-	mes "[Equipe de RecepÃ§Ã£o]";
+lhz_airport,143,49,3	script	Equipe de Recepção#lhz_air2a::lhz_airport2	90,{
+	mes "[Equipe de Recepção]";
 	mes "Bem-vindo ao Aeroporto de Lighthalzen.";
-	mes "Deixe-me guiÃ¡-lo atÃ© o";
-	mes "terminal principal caso tenha chego agora. Caso contrÃ¡rio, por favor";
-	mes "embarque no DirigÃ­vel para seu destino.";
+	mes "Deixe-me guiá-lo até o";
+	mes "terminal principal caso tenha chego agora. Caso contrário, por favor";
+	mes "embarque no Dirigível para seu destino.";
 	next;
 	if (select("Sair do terminal principal.:Cancelar.") == 1) {
-		mes "[Equipe de RecepÃ§Ã£o]";
-		mes "Uma vez no terminal principal, vocÃª terÃ¡ que pagar a taxa novamente";
-		mes "para embarcar no DirigÃ­vel. VocÃª sÃ³";
+		mes "[Equipe de Recepção]";
+		mes "Uma vez no terminal principal, você terá que pagar a taxa novamente";
+		mes "para embarcar no Dirigível. Você só";
 		mes "deve sair se a cidade de Lighthalzen for seu destino final.";
 		mes "Deseja prosseguir para o terminal principal?";
 		next;
-		if (select("Sim:NÃ£o") == 1) {
+		if (select("Sim:Não") == 1) {
 			warp "lhz_airport",142,40;
 			end;
 		}
 	}
-	mes "[Equipe de RecepÃ§Ã£o]";
+	mes "[Equipe de Recepção]";
 	mes "Certo, obrigado";
 	mes "pelo seu apoio";
-	mes "e espero que vocÃª tenha";
-	mes "um voo agradÃ¡vel~";
+	mes "e espero que você tenha";
+	mes "um voo agradável~";
 	close;
 }
 
-lhz_airport,126,51,3	duplicate(lhz_airport2)	Equipe de RecepÃ§Ã£o#lhz_air2b	90
-lhz_airport,158,50,3	duplicate(lhz_airport2)	Equipe de RecepÃ§Ã£o#lhz_air2c	90
+lhz_airport,126,51,3	duplicate(lhz_airport2)	Equipe de Recepção#lhz_air2b	90
+lhz_airport,158,50,3	duplicate(lhz_airport2)	Equipe de Recepção#lhz_air2c	90

@@ -12,27 +12,27 @@
 //= 1.0 First version.
 //============================================================ 
 
-//================= TraduÃ§Ã£o rAthenaBR =======================
-//= Ãšltima atualizaÃ§Ã£o feita: 23/06/2021
+//================= Tradução rAthenaBR =======================
+//= Última atualização feita: 23/06/2021
 //= Revisado por: Ruiivo
 //============================================================
 
 -	script	::Airship_Staff_izlude	-1,{
 	mes "[Assistente do Aeroplano]";
-		mes "Bem-vindo! VocÃª gostaria";
+		mes "Bem-vindo! Você gostaria";
 		mes "de embarcar no Aeroplano que";
-		mes "parte em um vÃ´o com paradas";
+		mes "parte em um vôo com paradas";
 		mes "em Juno e Rachel?";
 	next;
 	if (select("Embarque no Aeroplano para Juno/Rachel.:Cancelar.") == 1) {
 		mes "[Assistente do Aeroplano]";
 		mes "A passagem custa";
 		mes "1.200 zeny. No entanto, essa";
-		mes "cobranÃ§a Ã© dispensada se vocÃª usar";
-		mes "um bilhete grÃ¡tis para dirigÃ­vel. Agora";
-		mes "vocÃª ainda gostaria de embarcar?";
+		mes "cobrança é dispensada se você usar";
+		mes "um bilhete grátis para dirigível. Agora";
+		mes "você ainda gostaria de embarcar?";
 		next;
-		if (select("Sim:NÃ£o") == 1) {
+		if (select("Sim:Não") == 1) {
 			if (countitem(7311) > 0) {
 				delitem 7311,1;
 				warp "airplane_01",244,58;
@@ -44,7 +44,7 @@
 				end;
 			}
 			mes "[Assistente do Aeroplano]";
-			mes "Me desculpe, mas vocÃª nÃ£o";
+			mes "Me desculpe, mas você não";
 			mes "possui 1,200 zeny para pagar";
 			mes "pela passagem.";
 			close;
